@@ -2,7 +2,7 @@
 
 const express = require('express');
 const logger = require('./middleware/logger');
-const validator = require ('./middleware/validator');
+const validator = require('./middleware/validator');
 const error404Handler = require('./error-handlers/404');
 const error500Handler = require('./error-handlers/500');
 const app = express();
@@ -14,7 +14,12 @@ app.use(logger);
 
 app.get('/person', validator, (req, res, next) => {
   let { name } = req.query;
-  res.status(200).send(`Personal Greetings ${name}`);
+
+  if (!name) {
+    res.status(200).send('Simply Hello');
+  } else {
+    res.status(200).send(`Personal Greetings ${name}`);
+  }
 });
 
 app.get('/person/:name', (req, res, next) => {
