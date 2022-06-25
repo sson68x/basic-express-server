@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3002;
 
 app.use(logger);
 
-app.get('/person', validator, (req, res) => {
+app.get('/person', validator, (req, res, next) => {
   let { name } = req.query;
 
   if (!name) {
@@ -22,7 +22,7 @@ app.get('/person', validator, (req, res) => {
   }
 });
 
-app.get('/person/:name', (req, res) => {
+app.get('/person/:name', (req, res, next) => {
   let { name } = req.params;
   res.status(200).send(`Hello ${name}`);
 });
