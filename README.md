@@ -12,7 +12,7 @@ Build a basic Express server using best practices, including server modularizati
 
 ## Deployments
 
-- [GitHub pull request](https://github.com/sson68x/basic-express-server/pull/1)
+- [GitHub pull request](https://github.com/sson68x/basic-express-server/pull/4)
 - [Heroku app](https://ss-basic-express-server-prod.herokuapp.com/)
 
 ## Class Demo
