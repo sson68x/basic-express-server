@@ -2,7 +2,7 @@
 
 const express = require('express');
 const logger = require('./middleware/logger');
-const validator = require ('./middleware/validator');
+const validator = require('./middleware/validator');
 const error404Handler = require('./error-handlers/404');
 const error500Handler = require('./error-handlers/500');
 const app = express();

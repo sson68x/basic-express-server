@@ -8,6 +8,6 @@ const validator = function validator(req, res, next) {
     console.log('name:', name);
   }
   next();
-}
+};
 
 module.exports = validator;
