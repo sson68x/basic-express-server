@@ -18,17 +18,17 @@ describe('Server Tests', () => {
     });
   });
   describe('GET routes Tests', () => {
-    test('/hello route works with no query parameter', async () => {
+    test('/person route works with no query parameter', async () => {
       let response = await mockRequest.get('/person');
       expect(response.status).toEqual(200);
       expect(response.text).toEqual('Simply Hello');
     });
-    test('/hello route works with query parameter', async () => {
+    test('/person route works with query parameter', async () => {
       let response = await mockRequest.get('/person?name=Simon');
       expect(response.status).toEqual(200);
       expect(response.text).toEqual('Personal Greetings Simon');
     });
-    test('/hello route works with URL/path parameter', async () => {
+    test('/person route works with URL/path parameter', async () => {
       let response = await mockRequest.get('/person/Simon');
       expect(response.status).toEqual(200);
       expect(response.text).toEqual('Hello Simon');

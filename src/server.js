@@ -14,7 +14,12 @@ app.use(logger);
 
 app.get('/person', validator, (req, res, next) => {
   let { name } = req.query;
-  res.status(200).send(`Personal Greetings ${name}`);
+
+  if (!name) {
+    res.status(200).send('Simply Hello');
+  } else {
+    res.status(200).send(`Personal Greetings ${name}`);
+  }
 });
 
 app.get('/person/:name', (req, res, next) => {
